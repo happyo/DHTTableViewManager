@@ -7,22 +7,26 @@
 
 import Foundation
 
-class DHTTableViewSection {
+public class DHTTableViewSection {
     private(set) var items = [DHTTableViewItem]()
     var headerView : UIView?
     var footerView : UIView?
     var headerHeight : CGFloat?
     var footerHeight : CGFloat?
     
-    func addItem(_ item: DHTTableViewItem) {
+    public init() {
+        
+    }
+    
+    public func addItem(_ item: DHTTableViewItem) {
         self.items.append(item)
     }
     
-    func addItems(_ items: [DHTTableViewItem]) {
+    public func addItems(_ items: [DHTTableViewItem]) {
         self.items.append(contentsOf: items)
     }
 
-    func removeAllItems() {
+    public func removeAllItems() {
         self.items.removeAll()
     }
     

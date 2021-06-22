@@ -11,7 +11,7 @@ protocol DHTTableViewManagerDelegate : UIScrollViewDelegate {
     
 }
 
-class DHTTableViewManager : NSObject, UITableViewDelegate, UITableViewDataSource {
+public class DHTTableViewManager : NSObject, UITableViewDelegate, UITableViewDataSource {
     weak var delegate : DHTTableViewManagerDelegate?
     
     private var sections = [DHTTableViewSection]()
@@ -20,27 +20,45 @@ class DHTTableViewManager : NSObject, UITableViewDelegate, UITableViewDataSource
     
     private var registerMaps = [(cellType : UITableViewCell.Type, itemType : DHTTableViewItem.Type)]()
     
-    init(tableView : UITableView) {
+    // MARK: Public
+    public init(tableView : UITableView) {
+        super.init()
+        tableView.delegate = self
+        tableView.dataSource = self
         self.tableView = tableView
     }
     
-    func registerCellWithItem(_ cell: UITableViewCell.Type, _ item: DHTTableViewItem.Type) {
+    public func registerCellWithItem<C, I>(_ cell: C.Type, _ item: I.Type) where C : UITableViewCell, I : DHTTableViewItem {
         let tuple = (cellType : cell, itemType : item)
         self.registerMaps.append(tuple)
+    }
+    
+    public func addSection(_ section: DHTTableViewSection) {
+        self.sections.append(section)
+    }
+    
+    public func removeAllSections() {
+        self.sections.removeAll()
+    }
+    
+    public func reloadData() {
+        self.tableView?.reloadData()
     }
     
     // MARK: Private
     
     func typeForCellAtIndexPath(_ indexPath: IndexPath) -> UITableViewCell.Type? {
-        let item = self.itemAtIndexPath(indexPath)
-        
-        return self.registerMaps.filter { tuple in
-            let itemTempType = tuple.itemType
-            
-            return type(of: item) == itemTempType
-        }.map { tuple in
-            return tuple.cellType
-        }.first
+        if let item = self.itemAtIndexPath(indexPath) {
+            return self.registerMaps.filter { tuple in
+                let itemTempType = tuple.itemType
+                
+                return type(of: item) == itemTempType
+            }.map { tuple in
+                return tuple.cellType
+            }.first
+        } else {
+            return nil
+        }
     }
     
     func itemAtIndexPath(_ indexPath: IndexPath) -> DHTTableViewItem? {
@@ -58,11 +76,11 @@ class DHTTableViewManager : NSObject, UITableViewDelegate, UITableViewDataSource
     }
     
     // MARK: UITableViewDataSource
-    func numberOfSections(in tableView: UITableView) -> Int {
+    private func numberOfSections(in tableView: UITableView) -> Int {
         return self.sections.count
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (section < self.sections.count) {
             let sectionModel = self.sections[section]
             return sectionModel.items.count
@@ -71,7 +89,7 @@ class DHTTableViewManager : NSObject, UITableViewDelegate, UITableViewDataSource
         }
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var tempCell: UITableViewCell?
         
         if let cellType = self.typeForCellAtIndexPath(indexPath) {
@@ -104,19 +122,19 @@ class DHTTableViewManager : NSObject, UITableViewDelegate, UITableViewDataSource
         }
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    private func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let cellProtocol = cell as? DHTTableViewCellDelegate {
             cellProtocol.cellWillDisplay()
         }
     }
     
-    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    private func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let cellProtocol = cell as? DHTTableViewCellDelegate {
             cellProtocol.cellDidEndDisplay()
         }
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    private func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         var cellHeight: CGFloat = 0
         
         if let item = self.itemAtIndexPath(indexPath) {
@@ -130,7 +148,7 @@ class DHTTableViewManager : NSObject, UITableViewDelegate, UITableViewDataSource
         return cellHeight
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    private func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if (section < self.sections.count) {
             let sectionModel = self.sections[section]
             
@@ -140,7 +158,7 @@ class DHTTableViewManager : NSObject, UITableViewDelegate, UITableViewDataSource
         }
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    private func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if (section < self.sections.count) {
             let sectionModel = self.sections[section]
             
@@ -154,7 +172,7 @@ class DHTTableViewManager : NSObject, UITableViewDelegate, UITableViewDataSource
         }
     }
     
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    private func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         if (section < self.sections.count) {
             let sectionModel = self.sections[section]
             
@@ -164,7 +182,7 @@ class DHTTableViewManager : NSObject, UITableViewDelegate, UITableViewDataSource
         }
     }
     
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    private func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         if (section < self.sections.count) {
             let sectionModel = self.sections[section]
             
@@ -179,7 +197,7 @@ class DHTTableViewManager : NSObject, UITableViewDelegate, UITableViewDataSource
     }
     
     // MARK: UITableViewDelegate
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    private func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        if let item = self.itemAtIndexPath(indexPath) {
 //            if
 //        }

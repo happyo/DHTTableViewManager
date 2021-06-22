@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol DHTTableViewCellDelegate {
+public protocol DHTTableViewCellDelegate {
     /**
      cell创建的时候调用，只调用一次，类似viewDidLoad
      */

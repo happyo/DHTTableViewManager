@@ -7,10 +7,10 @@
 
 import Foundation
 
-class DHTTableViewItem {
+open class DHTTableViewItem {
     var indexPath : IndexPath?
     
-    required init() {
+    public required init() {
         
     }
 }
