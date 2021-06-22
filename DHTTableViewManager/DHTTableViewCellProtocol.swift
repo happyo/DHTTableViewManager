@@ -35,7 +35,7 @@ public protocol DHTTableViewCellDelegate {
     func cellDidEndDisplay()
 }
 
-extension DHTTableViewCellDelegate {
+public extension DHTTableViewCellDelegate {
     func cellWillDisplay() {
         
     }
