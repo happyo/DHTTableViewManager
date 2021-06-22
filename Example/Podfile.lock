@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DHTTableViewManager: 8c51c6bf9c63bbe2374c5af0e94a49eb75130a98
+  DHTTableViewManager: 3f7b564c245a06f68c9733b80b74ec0c4aa7e12b
 
 PODFILE CHECKSUM: dc57100ed81bd9e7cdda5c3ccf906e41fbd19f3f
 
