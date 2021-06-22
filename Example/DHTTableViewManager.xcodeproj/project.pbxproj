@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34C07DAD2681D12800EDB8F2 /* DHTDemoTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C07DAC2681D12800EDB8F2 /* DHTDemoTitleCell.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -29,7 +30,8 @@
 
 /* Begin PBXFileReference section */
 		201D8918C087F2B61CDB714B /* Pods_DHTTableViewManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DHTTableViewManager_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		559CB1F5122A79BE8D8C2A5F /* DHTTableViewManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DHTTableViewManager.podspec; path = ../DHTTableViewManager.podspec; sourceTree = "<group>"; };
+		34C07DAC2681D12800EDB8F2 /* DHTDemoTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHTDemoTitleCell.swift; sourceTree = "<group>"; };
+		559CB1F5122A79BE8D8C2A5F /* DHTTableViewManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DHTTableViewManager.podspec; path = ../DHTTableViewManager.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		567171648A2EA46EAE7D5F5A /* Pods-DHTTableViewManager_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DHTTableViewManager_Example.release.xcconfig"; path = "Target Support Files/Pods-DHTTableViewManager_Example/Pods-DHTTableViewManager_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* DHTTableViewManager_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DHTTableViewManager_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34C07DAB2681D0FF00EDB8F2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				34C07DAC2681D12800EDB8F2 /* DHTDemoTitleCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +103,7 @@
 		607FACD21AFB9204008FA782 /* Example for DHTTableViewManager */ = {
 			isa = PBXGroup;
 			children = (
+				34C07DAB2681D0FF00EDB8F2 /* Cells */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -332,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				34C07DAD2681D12800EDB8F2 /* DHTDemoTitleCell.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

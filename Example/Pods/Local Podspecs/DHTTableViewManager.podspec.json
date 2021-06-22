@@ -18,5 +18,5 @@
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "DHTTableViewManager/Classes/**/*"
+  "source_files": "DHTTableViewManager/**/*"
 }
