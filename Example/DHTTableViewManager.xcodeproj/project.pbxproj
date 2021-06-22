@@ -31,7 +31,7 @@
 /* Begin PBXFileReference section */
 		201D8918C087F2B61CDB714B /* Pods_DHTTableViewManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DHTTableViewManager_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C07DAC2681D12800EDB8F2 /* DHTDemoTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHTDemoTitleCell.swift; sourceTree = "<group>"; };
-		559CB1F5122A79BE8D8C2A5F /* DHTTableViewManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DHTTableViewManager.podspec; path = ../DHTTableViewManager.podspec; sourceTree = "<group>"; };
+		559CB1F5122A79BE8D8C2A5F /* DHTTableViewManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DHTTableViewManager.podspec; path = ../DHTTableViewManager.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		567171648A2EA46EAE7D5F5A /* Pods-DHTTableViewManager_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DHTTableViewManager_Example.release.xcconfig"; path = "Target Support Files/Pods-DHTTableViewManager_Example/Pods-DHTTableViewManager_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* DHTTableViewManager_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DHTTableViewManager_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
