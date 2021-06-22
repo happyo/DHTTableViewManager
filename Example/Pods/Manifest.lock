@@ -1,0 +1,16 @@
+PODS:
+  - DHTTableViewManager (0.1.0)
+
+DEPENDENCIES:
+  - DHTTableViewManager (from `../`)
+
+EXTERNAL SOURCES:
+  DHTTableViewManager:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DHTTableViewManager: 666e09138498749504c9e06322852ef521cf302d
+
+PODFILE CHECKSUM: dc57100ed81bd9e7cdda5c3ccf906e41fbd19f3f
+
+COCOAPODS: 1.9.3
