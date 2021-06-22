@@ -7,27 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ACC807634FA443F7D0E6777DFA7FB1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		10A11F65E0540147564C24A229B328F1 /* Pods-DHTTableViewManager_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6117DB25749578EB73853AEE5A20735A /* Pods-DHTTableViewManager_Tests-dummy.m */; };
 		2238D77B198F414CF4B483B943129875 /* Pods-DHTTableViewManager_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 07C97C3041C179624372256C6619730C /* Pods-DHTTableViewManager_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2356D7C0180B49BC54003AA7F152821E /* Pods-DHTTableViewManager_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF7F4B172CACCA2B712BB4621631920 /* Pods-DHTTableViewManager_Example-dummy.m */; };
-		478707DEFF9CA6DA83732BFEA85BEE4B /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9697033AB7BDDEED38288D366B6AC44 /* ReplaceMe.swift */; };
-		4A5E94890C8F02155848F97ACCFB8583 /* DHTTableViewManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 00EA35DF128686FD7071EF29340628E2 /* DHTTableViewManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8152D5975A0DB17E7745756BB4FAEFA4 /* DHTTableViewManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F16DB4E4D2FF14896C53723CA2DC4F78 /* DHTTableViewManager-dummy.m */; };
+		38075C3A868EBB10F3D5BF6AF19654D9 /* DHTTableViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE62D2D830468AA79C52819D8572FC2 /* DHTTableViewItem.swift */; };
+		78C4D564B0E596E6C02B7B5A4DF7310C /* DHTTableViewManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 916517DBA7E2429C1E2D1E6687FD1563 /* DHTTableViewManager-dummy.m */; };
+		91B60FE7BCF7DBEDB23F2ED2B5BCA3B2 /* DHTTableViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E105E5D7A416CE105DFA748AFF18C00 /* DHTTableViewSection.swift */; };
+		AD87F9872F39DA2108892AB445F37DF8 /* DHTTableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA19737F076DD4D5161DE02F8C3B449 /* DHTTableViewCellProtocol.swift */; };
 		AD95BA36FCBD5D3690EEA71239AD0493 /* Pods-DHTTableViewManager_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A84EB5D5E1EA3B5ABE96FF5BB47E426E /* Pods-DHTTableViewManager_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B44CFC545EA4C730BEB6E9DBFF6C3ABD /* DHTTableViewManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 377799BD89A08ADB31F367577413325C /* DHTTableViewManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D12DEEF39C2649B84D625F34AB5AFA95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		DB9458F1F3F0B1F1A631637E392B9A60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		D1D33CD958BF1FEEAAC432262F406C47 /* DHTTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA1B0DB2CEE6A346BBBAFFC05A0AB7B /* DHTTableViewManager.swift */; };
 		E30C72518A8BA03A955DBD74FDA48E47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		135824E4112094588AE16BAD6907702B /* PBXContainerItemProxy */ = {
+		2A728FEE66DE69AAE836ED5A537F014D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C9AD5E75D6B4F6B7174ED8DD2B088235;
 			remoteInfo = "Pods-DHTTableViewManager_Example";
 		};
-		36695E92269BABD8BBCA4518299DAD6E /* PBXContainerItemProxy */ = {
+		C98467EE190A976EF9B413CF65DF1125 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -37,47 +40,50 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00EA35DF128686FD7071EF29340628E2 /* DHTTableViewManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DHTTableViewManager-umbrella.h"; sourceTree = "<group>"; };
+		01D800F4E7B6A42CF850A2BF2E846F7E /* DHTTableViewManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = DHTTableViewManager.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		07C97C3041C179624372256C6619730C /* Pods-DHTTableViewManager_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DHTTableViewManager_Tests-umbrella.h"; sourceTree = "<group>"; };
 		11126E95262BB8DE9416328E1C93F749 /* Pods-DHTTableViewManager_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DHTTableViewManager_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		1369089096BBEBB9D976915110324D5C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		1DA813F398D63D9F9787885E579EA344 /* DHTTableViewManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DHTTableViewManager.release.xcconfig; sourceTree = "<group>"; };
 		20558223F03B395C76C451CA3056496B /* Pods-DHTTableViewManager_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DHTTableViewManager_Tests.modulemap"; sourceTree = "<group>"; };
 		2344FC2B941B158088816DE5560BAFA9 /* Pods-DHTTableViewManager_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DHTTableViewManager_Tests-Info.plist"; sourceTree = "<group>"; };
-		247C594A437C982DF749C06C01341A12 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		24AB3BA2A55BEDC7FA161AFF575BA52B /* DHTTableViewManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DHTTableViewManager.debug.xcconfig; sourceTree = "<group>"; };
-		3293A04512056FC9F7FF415DCE67946D /* DHTTableViewManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DHTTableViewManager-prefix.pch"; sourceTree = "<group>"; };
-		44A75CF8B505867D7EE8E02E8A7F822F /* DHTTableViewManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = DHTTableViewManager.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		4D9A20204B238448584B33D8B0F0E40C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		34B1B1954E91F86ED053131D18BD2972 /* DHTTableViewManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DHTTableViewManager-prefix.pch"; sourceTree = "<group>"; };
+		35905DE1F1B6BAFB10478AE9D8F64EB1 /* DHTTableViewManager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DHTTableViewManager-Info.plist"; sourceTree = "<group>"; };
+		377799BD89A08ADB31F367577413325C /* DHTTableViewManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DHTTableViewManager-umbrella.h"; sourceTree = "<group>"; };
 		4E33C86FF2FB83EE3A44B72BFDBCBB46 /* Pods-DHTTableViewManager_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DHTTableViewManager_Example-frameworks.sh"; sourceTree = "<group>"; };
 		5914EC4800DE18CED6534728002DABAC /* Pods-DHTTableViewManager_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DHTTableViewManager_Example-Info.plist"; sourceTree = "<group>"; };
+		5BA19737F076DD4D5161DE02F8C3B449 /* DHTTableViewCellProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DHTTableViewCellProtocol.swift; path = DHTTableViewManager/DHTTableViewCellProtocol.swift; sourceTree = "<group>"; };
 		6083DF7249FF83FF8FF251D8E0F2FEB6 /* Pods-DHTTableViewManager_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DHTTableViewManager_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6117DB25749578EB73853AEE5A20735A /* Pods-DHTTableViewManager_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DHTTableViewManager_Tests-dummy.m"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7F0F29A20EE0EC2A40F30585F986D00E /* Pods-DHTTableViewManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DHTTableViewManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		8AAB6DD6E3688DB69BEEA96D2A1BB6D1 /* Pods-DHTTableViewManager_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DHTTableViewManager_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8E105E5D7A416CE105DFA748AFF18C00 /* DHTTableViewSection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DHTTableViewSection.swift; path = DHTTableViewManager/DHTTableViewSection.swift; sourceTree = "<group>"; };
+		8FAD508B29B75CD3ECC9CA701DA5A2D9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		916517DBA7E2429C1E2D1E6687FD1563 /* DHTTableViewManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DHTTableViewManager-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A100012C311479E0B0D4C27244836146 /* Pods-DHTTableViewManager_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DHTTableViewManager_Example.modulemap"; sourceTree = "<group>"; };
 		A206647B2EC13FA0E8975E0CB3802DA8 /* Pods-DHTTableViewManager_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DHTTableViewManager_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		A84EB5D5E1EA3B5ABE96FF5BB47E426E /* Pods-DHTTableViewManager_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DHTTableViewManager_Example-umbrella.h"; sourceTree = "<group>"; };
-		B0DE85320F093B6DD0653DE52C21705F /* DHTTableViewManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DHTTableViewManager.modulemap; sourceTree = "<group>"; };
+		ACE62D2D830468AA79C52819D8572FC2 /* DHTTableViewItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DHTTableViewItem.swift; path = DHTTableViewManager/DHTTableViewItem.swift; sourceTree = "<group>"; };
 		BAF7F4B172CACCA2B712BB4621631920 /* Pods-DHTTableViewManager_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DHTTableViewManager_Example-dummy.m"; sourceTree = "<group>"; };
 		C12DBCFD209FA02718AADB89246815BA /* DHTTableViewManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DHTTableViewManager.framework; path = DHTTableViewManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C876D87C4714165F0BC4F84340BB2210 /* DHTTableViewManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DHTTableViewManager.release.xcconfig; sourceTree = "<group>"; };
-		D9697033AB7BDDEED38288D366B6AC44 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = DHTTableViewManager/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		D39CECC50153AE5F52FC399F3CD42B54 /* DHTTableViewManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DHTTableViewManager.modulemap; sourceTree = "<group>"; };
 		DCF4A24411D8476FDF4C2F30EE998119 /* Pods_DHTTableViewManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DHTTableViewManager_Tests.framework; path = "Pods-DHTTableViewManager_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDCB0DCCA26C6F868B77C083A2D59D2E /* Pods-DHTTableViewManager_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DHTTableViewManager_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		F16DB4E4D2FF14896C53723CA2DC4F78 /* DHTTableViewManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DHTTableViewManager-dummy.m"; sourceTree = "<group>"; };
+		EEA1B0DB2CEE6A346BBBAFFC05A0AB7B /* DHTTableViewManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DHTTableViewManager.swift; path = DHTTableViewManager/DHTTableViewManager.swift; sourceTree = "<group>"; };
 		F4661350A2C3F59EDE5B4C48DC673899 /* Pods-DHTTableViewManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DHTTableViewManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		FD8EAA13BC7F338E82149C62B58A6E93 /* DHTTableViewManager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DHTTableViewManager-Info.plist"; sourceTree = "<group>"; };
+		F924763541651B31380A96012A7E0570 /* DHTTableViewManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DHTTableViewManager.debug.xcconfig; sourceTree = "<group>"; };
 		FEE9BBE4D2FCD8176F231080FE4B0A37 /* Pods_DHTTableViewManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DHTTableViewManager_Example.framework; path = "Pods-DHTTableViewManager_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3AAF7BFE2D871CA15FB968D0BABD4F /* Pods-DHTTableViewManager_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DHTTableViewManager_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		75921F83F022BC64910A4C02F160342A /* Frameworks */ = {
+		0784D3D818DC8CC3D5D45E5E3E10DDA2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB9458F1F3F0B1F1A631637E392B9A60 /* Foundation.framework in Frameworks */,
+				0ACC807634FA443F7D0E6777DFA7FB1D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,21 +116,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2A1523900117DC62FF640360F83D339E /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B0DE85320F093B6DD0653DE52C21705F /* DHTTableViewManager.modulemap */,
-				F16DB4E4D2FF14896C53723CA2DC4F78 /* DHTTableViewManager-dummy.m */,
-				FD8EAA13BC7F338E82149C62B58A6E93 /* DHTTableViewManager-Info.plist */,
-				3293A04512056FC9F7FF415DCE67946D /* DHTTableViewManager-prefix.pch */,
-				00EA35DF128686FD7071EF29340628E2 /* DHTTableViewManager-umbrella.h */,
-				24AB3BA2A55BEDC7FA161AFF575BA52B /* DHTTableViewManager.debug.xcconfig */,
-				C876D87C4714165F0BC4F84340BB2210 /* DHTTableViewManager.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/DHTTableViewManager";
-			sourceTree = "<group>";
-		};
 		31012DD47A3F5EDFAAEF75D7A6973050 /* Pods-DHTTableViewManager_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +133,20 @@
 			path = "Target Support Files/Pods-DHTTableViewManager_Example";
 			sourceTree = "<group>";
 		};
+		4F4AAF56A163AA26FC315FA3318BB2D2 /* DHTTableViewManager */ = {
+			isa = PBXGroup;
+			children = (
+				5BA19737F076DD4D5161DE02F8C3B449 /* DHTTableViewCellProtocol.swift */,
+				ACE62D2D830468AA79C52819D8572FC2 /* DHTTableViewItem.swift */,
+				EEA1B0DB2CEE6A346BBBAFFC05A0AB7B /* DHTTableViewManager.swift */,
+				8E105E5D7A416CE105DFA748AFF18C00 /* DHTTableViewSection.swift */,
+				65193766BAFBF1665FDF981C6E82F9A4 /* Pod */,
+				CEBBE29E417ABF7B32579E7A29D0830D /* Support Files */,
+			);
+			name = DHTTableViewManager;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,23 +155,12 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		6826F001B5B930950828333847F9BFB5 /* DHTTableViewManager */ = {
+		65193766BAFBF1665FDF981C6E82F9A4 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				D9697033AB7BDDEED38288D366B6AC44 /* ReplaceMe.swift */,
-				6E9593D743BB4E477CF29AFAB58682F5 /* Pod */,
-				2A1523900117DC62FF640360F83D339E /* Support Files */,
-			);
-			name = DHTTableViewManager;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		6E9593D743BB4E477CF29AFAB58682F5 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				44A75CF8B505867D7EE8E02E8A7F822F /* DHTTableViewManager.podspec */,
-				4D9A20204B238448584B33D8B0F0E40C /* LICENSE */,
-				247C594A437C982DF749C06C01341A12 /* README.md */,
+				01D800F4E7B6A42CF850A2BF2E846F7E /* DHTTableViewManager.podspec */,
+				1369089096BBEBB9D976915110324D5C /* LICENSE */,
+				8FAD508B29B75CD3ECC9CA701DA5A2D9 /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -187,19 +181,34 @@
 			path = "Target Support Files/Pods-DHTTableViewManager_Tests";
 			sourceTree = "<group>";
 		};
-		8D681863C7FBE1A822213E881B99DB18 /* Development Pods */ = {
+		C3F93D94F413A1FD64EC88697A446803 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6826F001B5B930950828333847F9BFB5 /* DHTTableViewManager */,
+				4F4AAF56A163AA26FC315FA3318BB2D2 /* DHTTableViewManager */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		CEBBE29E417ABF7B32579E7A29D0830D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D39CECC50153AE5F52FC399F3CD42B54 /* DHTTableViewManager.modulemap */,
+				916517DBA7E2429C1E2D1E6687FD1563 /* DHTTableViewManager-dummy.m */,
+				35905DE1F1B6BAFB10478AE9D8F64EB1 /* DHTTableViewManager-Info.plist */,
+				34B1B1954E91F86ED053131D18BD2972 /* DHTTableViewManager-prefix.pch */,
+				377799BD89A08ADB31F367577413325C /* DHTTableViewManager-umbrella.h */,
+				F924763541651B31380A96012A7E0570 /* DHTTableViewManager.debug.xcconfig */,
+				1DA813F398D63D9F9787885E579EA344 /* DHTTableViewManager.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/DHTTableViewManager";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				8D681863C7FBE1A822213E881B99DB18 /* Development Pods */,
+				C3F93D94F413A1FD64EC88697A446803 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				1E171232259DD9E12DD1E761B319EE81 /* Products */,
 				FA55BFD61516CDAF51189A03D31A724F /* Targets Support Files */,
@@ -234,19 +243,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6BC11C4CBE8FEE57B61A675C612BE520 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4A5E94890C8F02155848F97ACCFB8583 /* DHTTableViewManager-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8030D397A3B0ACF4D51F03C6E27DAF09 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2238D77B198F414CF4B483B943129875 /* Pods-DHTTableViewManager_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE63DCACFA02D26820C12CE7645939D9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B44CFC545EA4C730BEB6E9DBFF6C3ABD /* DHTTableViewManager-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +274,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				FE30654E10F546C3A7A63336E13DF70F /* PBXTargetDependency */,
+				5776DE4A257925036F7E000BE297E48E /* PBXTargetDependency */,
 			);
 			name = "Pods-DHTTableViewManager_Tests";
 			productName = "Pods-DHTTableViewManager_Tests";
@@ -274,12 +283,12 @@
 		};
 		A77F59BFC0F596CCC39D084CF101809D /* DHTTableViewManager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2B7E8E149FCE2B8FC4B63D95E67B9B4A /* Build configuration list for PBXNativeTarget "DHTTableViewManager" */;
+			buildConfigurationList = 5D221AB1EE76D1A4107D8D69D8D6A6D4 /* Build configuration list for PBXNativeTarget "DHTTableViewManager" */;
 			buildPhases = (
-				6BC11C4CBE8FEE57B61A675C612BE520 /* Headers */,
-				13AF673F2DB1A5BBA3796ACFF2F45F4B /* Sources */,
-				75921F83F022BC64910A4C02F160342A /* Frameworks */,
-				0E0A450212F2A203F3B11A699CA12A98 /* Resources */,
+				AE63DCACFA02D26820C12CE7645939D9 /* Headers */,
+				5EA6395E5D51E35846C75652E8E36554 /* Sources */,
+				0784D3D818DC8CC3D5D45E5E3E10DDA2 /* Frameworks */,
+				284C7EBDCE246D136D7680106320BB59 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -302,7 +311,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				043E2CBC08D3DCFA3DC74CEA9A4F964D /* PBXTargetDependency */,
+				20D59E2C23A04FFC79070BC741A67705 /* PBXTargetDependency */,
 			);
 			name = "Pods-DHTTableViewManager_Example";
 			productName = "Pods-DHTTableViewManager_Example";
@@ -339,14 +348,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0E0A450212F2A203F3B11A699CA12A98 /* Resources */ = {
+		25FF853496A540BD61469122A6B6C160 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		25FF853496A540BD61469122A6B6C160 /* Resources */ = {
+		284C7EBDCE246D136D7680106320BB59 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -363,12 +372,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		13AF673F2DB1A5BBA3796ACFF2F45F4B /* Sources */ = {
+		5EA6395E5D51E35846C75652E8E36554 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8152D5975A0DB17E7745756BB4FAEFA4 /* DHTTableViewManager-dummy.m in Sources */,
-				478707DEFF9CA6DA83732BFEA85BEE4B /* ReplaceMe.swift in Sources */,
+				AD87F9872F39DA2108892AB445F37DF8 /* DHTTableViewCellProtocol.swift in Sources */,
+				38075C3A868EBB10F3D5BF6AF19654D9 /* DHTTableViewItem.swift in Sources */,
+				78C4D564B0E596E6C02B7B5A4DF7310C /* DHTTableViewManager-dummy.m in Sources */,
+				D1D33CD958BF1FEEAAC432262F406C47 /* DHTTableViewManager.swift in Sources */,
+				91B60FE7BCF7DBEDB23F2ED2B5BCA3B2 /* DHTTableViewSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,17 +403,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		043E2CBC08D3DCFA3DC74CEA9A4F964D /* PBXTargetDependency */ = {
+		20D59E2C23A04FFC79070BC741A67705 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DHTTableViewManager;
 			target = A77F59BFC0F596CCC39D084CF101809D /* DHTTableViewManager */;
-			targetProxy = 36695E92269BABD8BBCA4518299DAD6E /* PBXContainerItemProxy */;
+			targetProxy = C98467EE190A976EF9B413CF65DF1125 /* PBXContainerItemProxy */;
 		};
-		FE30654E10F546C3A7A63336E13DF70F /* PBXTargetDependency */ = {
+		5776DE4A257925036F7E000BE297E48E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-DHTTableViewManager_Example";
 			target = C9AD5E75D6B4F6B7174ED8DD2B088235 /* Pods-DHTTableViewManager_Example */;
-			targetProxy = 135824E4112094588AE16BAD6907702B /* PBXContainerItemProxy */;
+			targetProxy = 2A728FEE66DE69AAE836ED5A537F014D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -439,67 +451,6 @@
 			};
 			name = Release;
 		};
-		45AF7B3A887036C6B3FC6591D110A8B9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C876D87C4714165F0BC4F84340BB2210 /* DHTTableViewManager.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/DHTTableViewManager/DHTTableViewManager-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DHTTableViewManager/DHTTableViewManager-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/DHTTableViewManager/DHTTableViewManager.modulemap";
-				PRODUCT_MODULE_NAME = DHTTableViewManager;
-				PRODUCT_NAME = DHTTableViewManager;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		57520D830F4B3A980B7764B0A41665E3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24AB3BA2A55BEDC7FA161AFF575BA52B /* DHTTableViewManager.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/DHTTableViewManager/DHTTableViewManager-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DHTTableViewManager/DHTTableViewManager-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/DHTTableViewManager/DHTTableViewManager.modulemap";
-				PRODUCT_MODULE_NAME = DHTTableViewManager;
-				PRODUCT_NAME = DHTTableViewManager;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		584B994D99B1AE9D6515CBCDF40CECAD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F4661350A2C3F59EDE5B4C48DC673899 /* Pods-DHTTableViewManager_Example.debug.xcconfig */;
@@ -531,6 +482,37 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		5D71979FE0BDD4BB8D5C1A46C3F6F194 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DA813F398D63D9F9787885E579EA344 /* DHTTableViewManager.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DHTTableViewManager/DHTTableViewManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DHTTableViewManager/DHTTableViewManager-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DHTTableViewManager/DHTTableViewManager.modulemap";
+				PRODUCT_MODULE_NAME = DHTTableViewManager;
+				PRODUCT_NAME = DHTTableViewManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		8333569BA27F668697EC093B43F6E9E5 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -625,6 +607,36 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
+		};
+		EC06ACD3F6C5E684BC05DB4AEA0DBC4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F924763541651B31380A96012A7E0570 /* DHTTableViewManager.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DHTTableViewManager/DHTTableViewManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DHTTableViewManager/DHTTableViewManager-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DHTTableViewManager/DHTTableViewManager.modulemap";
+				PRODUCT_MODULE_NAME = DHTTableViewManager;
+				PRODUCT_NAME = DHTTableViewManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		EF3BAAA889B17377BE8F3254633FA0A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -735,15 +747,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2B7E8E149FCE2B8FC4B63D95E67B9B4A /* Build configuration list for PBXNativeTarget "DHTTableViewManager" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				57520D830F4B3A980B7764B0A41665E3 /* Debug */,
-				45AF7B3A887036C6B3FC6591D110A8B9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -758,6 +761,15 @@
 			buildConfigurations = (
 				F81E42F2DB6BCFAE7FB998869359C47C /* Debug */,
 				21D1D423123DA8E8AA220783B94DCAF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D221AB1EE76D1A4107D8D69D8D6A6D4 /* Build configuration list for PBXNativeTarget "DHTTableViewManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC06ACD3F6C5E684BC05DB4AEA0DBC4A /* Debug */,
+				5D71979FE0BDD4BB8D5C1A46C3F6F194 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
