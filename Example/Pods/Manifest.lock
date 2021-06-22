@@ -1,5 +1,5 @@
 PODS:
-  - DHTTableViewManager (0.1.0)
+  - DHTTableViewManager (0.1.1)
 
 DEPENDENCIES:
   - DHTTableViewManager (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DHTTableViewManager: 3f7b564c245a06f68c9733b80b74ec0c4aa7e12b
+  DHTTableViewManager: d5120e6487943348fab75d7caf90e974dfbe30a9
 
 PODFILE CHECKSUM: dc57100ed81bd9e7cdda5c3ccf906e41fbd19f3f
 
