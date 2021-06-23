@@ -17,6 +17,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.tableView = UITableView(frame: CGRect(x: 0, y: 0, width: 300, height: 500), style: .grouped)
+        
+        self.tableView.estimatedRowHeight = 20
+        self.tableView.rowHeight = UITableView.automaticDimension
+        
         self.view.addSubview(self.tableView)
         self.tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
