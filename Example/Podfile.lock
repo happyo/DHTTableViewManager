@@ -1,8 +1,14 @@
 PODS:
   - DHTTableViewManager (0.1.1)
+  - SnapKit (4.2.0)
 
 DEPENDENCIES:
   - DHTTableViewManager (from `../`)
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - SnapKit
 
 EXTERNAL SOURCES:
   DHTTableViewManager:
@@ -10,7 +16,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   DHTTableViewManager: d5120e6487943348fab75d7caf90e974dfbe30a9
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: dc57100ed81bd9e7cdda5c3ccf906e41fbd19f3f
+PODFILE CHECKSUM: d4052e73646246522eb45b2ea5391a4a7d7746ad
 
 COCOAPODS: 1.9.3

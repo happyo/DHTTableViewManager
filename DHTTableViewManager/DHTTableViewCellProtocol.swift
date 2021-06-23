@@ -35,7 +35,12 @@ public protocol DHTTableViewCellDelegate {
     func cellDidEndDisplay()
 }
 
+// 默认实现可选协议方法
 public extension DHTTableViewCellDelegate {
+    static func heightForCellWithItem(_ item: DHTTableViewItem) -> CGFloat {
+        return CGFloat.leastNonzeroMagnitude
+    }
+    
     func cellWillDisplay() {
         
     }

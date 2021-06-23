@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import SnapKit
 import DHTTableViewManager
 
 class DHTDemoTitleItem : DHTTableViewItem {
@@ -15,33 +15,29 @@ class DHTDemoTitleItem : DHTTableViewItem {
 }
 
 class DHTDemoTitleCell : UITableViewCell, DHTTableViewCellDelegate {
-    var label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.configSubviews()
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        self.configSubviews()
-    }
+    lazy var label: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        
+        return label
+    }()
     
     // MARK: Private
     func configSubviews() {
-        self.addSubview(label)
+        self.contentView.addSubview(label)
+        self.label.snp.makeConstraints { make in
+            make.top.leading.trailing.bottom.equalToSuperview()
+        }
     }
     
     // MARK: DHTTableViewCellDelegate
     func cellDidLoad() {
-        
+        self.configSubviews()
     }
     
     func configCellWithItem(_ item: DHTTableViewItem) {
-        self.label.text = "adfhlsadfhlsjdfl;sajdflksdf"
-    }
-    
-    static func heightForCellWithItem(_ item: DHTTableViewItem) -> CGFloat {
-        return 100
+        if let titleItem = item as? DHTDemoTitleItem {
+            self.label.text = titleItem.title
+        }
     }
 }

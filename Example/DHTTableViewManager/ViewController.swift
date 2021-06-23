@@ -23,8 +23,14 @@ class ViewController: UIViewController {
         
         let section = DHTTableViewSection()
         
-        for _ in 0..<10 {
-            section.addItem(DHTDemoTitleItem())
+        for i in 0..<10 {
+            let item = DHTDemoTitleItem()
+            var str = "a"
+            for _ in 0..<i {
+                str += "hahaasdfasdfsadfasdfasdfasdf"
+            }
+            item.title = str
+            section.addItem(item)
         }
         
         self.manager.addSection(section)
