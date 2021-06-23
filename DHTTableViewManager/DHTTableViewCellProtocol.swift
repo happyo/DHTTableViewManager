@@ -38,7 +38,7 @@ public protocol DHTTableViewCellDelegate {
 // 默认实现可选协议方法
 public extension DHTTableViewCellDelegate {
     static func heightForCellWithItem(_ item: DHTTableViewItem) -> CGFloat {
-        return CGFloat.leastNonzeroMagnitude
+        return UITableView.automaticDimension
     }
     
     func cellWillDisplay() {

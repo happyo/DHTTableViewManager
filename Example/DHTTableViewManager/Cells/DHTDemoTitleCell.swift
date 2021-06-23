@@ -41,7 +41,7 @@ class DHTDemoTitleCell : UITableViewCell, DHTTableViewCellDelegate {
         }
     }
     
-    static func heightForCellWithItem(_ item: DHTTableViewItem) -> CGFloat {
-        return 100
-    }
+//    static func heightForCellWithItem(_ item: DHTTableViewItem) -> CGFloat {
+//        return 100
+//    }
 }
