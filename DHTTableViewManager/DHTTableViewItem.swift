@@ -8,7 +8,7 @@
 import Foundation
 
 open class DHTTableViewItem {
-    var indexPath : IndexPath?
+    public var indexPath : IndexPath?
     
     public required init() {
         

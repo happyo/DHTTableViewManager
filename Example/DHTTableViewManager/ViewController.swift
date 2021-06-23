@@ -16,8 +16,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.tableView = UITableView(frame: CGRect(x: 0, y: 0, width: 300, height: 500))
+        self.tableView = UITableView(frame: CGRect(x: 0, y: 0, width: 300, height: 500), style: .grouped)
         self.view.addSubview(self.tableView)
+        self.tableView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
         self.manager = DHTTableViewManager(tableView: self.tableView)
         self.manager.registerCellWithItem(DHTDemoTitleCell.self, DHTDemoTitleItem.self)
         
@@ -32,6 +35,19 @@ class ViewController: UIViewController {
             item.title = str
             section.addItem(item)
         }
+        
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
+        view.backgroundColor = .red
+        
+        section.headerView = view
+        section.headerHeight = 100
+        
+        
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        footerView.backgroundColor = .blue
+        
+        section.footerView = footerView
+        section.footerHeight = 100
         
         self.manager.addSection(section)
         self.manager.reloadData()

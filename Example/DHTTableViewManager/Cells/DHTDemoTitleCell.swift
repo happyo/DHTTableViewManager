@@ -40,4 +40,8 @@ class DHTDemoTitleCell : UITableViewCell, DHTTableViewCellDelegate {
             self.label.text = titleItem.title
         }
     }
+    
+    static func heightForCellWithItem(_ item: DHTTableViewItem) -> CGFloat {
+        return 100
+    }
 }

@@ -9,10 +9,10 @@ import Foundation
 
 public class DHTTableViewSection {
     private(set) var items = [DHTTableViewItem]()
-    var headerView : UIView?
-    var footerView : UIView?
-    var headerHeight : CGFloat?
-    var footerHeight : CGFloat?
+    public var headerView : UIView?
+    public var footerView : UIView?
+    public var headerHeight : CGFloat?
+    public var footerHeight : CGFloat?
     
     public init() {
         

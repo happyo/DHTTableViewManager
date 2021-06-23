@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol DHTTableViewManagerDelegate : UIScrollViewDelegate {
+public protocol DHTTableViewManagerDelegate : UIScrollViewDelegate {
     
 }
 
 public class DHTTableViewManager : NSObject, UITableViewDelegate, UITableViewDataSource {
-    weak var delegate : DHTTableViewManagerDelegate?
+    public weak var delegate : DHTTableViewManagerDelegate?
     
     private var sections = [DHTTableViewSection]()
     
@@ -76,7 +76,7 @@ public class DHTTableViewManager : NSObject, UITableViewDelegate, UITableViewDat
     }
     
     // MARK: UITableViewDataSource
-    private func numberOfSections(in tableView: UITableView) -> Int {
+    public func numberOfSections(in tableView: UITableView) -> Int {
         return self.sections.count
     }
     
@@ -122,20 +122,20 @@ public class DHTTableViewManager : NSObject, UITableViewDelegate, UITableViewDat
         }
     }
     
-    private func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let cellProtocol = cell as? DHTTableViewCellDelegate {
             cellProtocol.cellWillDisplay()
         }
     }
     
-    private func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let cellProtocol = cell as? DHTTableViewCellDelegate {
             cellProtocol.cellDidEndDisplay()
         }
     }
     
-    private func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        var cellHeight: CGFloat = 0
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        var cellHeight: CGFloat = CGFloat.leastNonzeroMagnitude
         
         if let item = self.itemAtIndexPath(indexPath) {
             if let cellType = self.typeForCellAtIndexPath(indexPath) {
@@ -148,7 +148,7 @@ public class DHTTableViewManager : NSObject, UITableViewDelegate, UITableViewDat
         return cellHeight
     }
     
-    private func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if (section < self.sections.count) {
             let sectionModel = self.sections[section]
             
@@ -158,21 +158,21 @@ public class DHTTableViewManager : NSObject, UITableViewDelegate, UITableViewDat
         }
     }
     
-    private func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if (section < self.sections.count) {
             let sectionModel = self.sections[section]
             
             if let height = sectionModel.headerHeight {
                 return height
             } else {
-                return 0
+                return CGFloat.leastNonzeroMagnitude
             }
         } else {
-            return 0
+            return CGFloat.leastNonzeroMagnitude
         }
     }
     
-    private func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         if (section < self.sections.count) {
             let sectionModel = self.sections[section]
             
@@ -182,26 +182,24 @@ public class DHTTableViewManager : NSObject, UITableViewDelegate, UITableViewDat
         }
     }
     
-    private func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         if (section < self.sections.count) {
             let sectionModel = self.sections[section]
             
             if let height = sectionModel.footerHeight {
                 return height
             } else {
-                return 0
+                return CGFloat.leastNonzeroMagnitude
             }
         } else {
-            return 0
+            return CGFloat.leastNonzeroMagnitude
         }
     }
     
     // MARK: UITableViewDelegate
-    private func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        if let item = self.itemAtIndexPath(indexPath) {
 //            if
 //        }
     }
-    
-    
 }
